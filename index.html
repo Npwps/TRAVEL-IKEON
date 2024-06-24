@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IKEON</title>
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- HEADR CONTAINER BAGIAN ATAS #HEADER-->
+<header class="header">
+  <!-- Overlay untuk efek visual -->
+  
+  <!-- Bagian atas header -->
+  <div class="header-top">
+    <div class="container">
+      <!-- Logo situs -->
+      <a href="https://ikeon.rf.gd" class="helpline-box">
+        <div class="wrapper">
+          <a href="https://ikeon.rf.gd" class="logo">
+            <img src="assets/images/logo.png" alt="logo">
+          </a>
+        </div>
+      </a>
+      <!-- Grup tombol header -->
+      <div class="header-btn-group" id="search">
+        <!-- Tombol untuk membuka menu navigasi -->
+        <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bagian bawah header -->
+
+      <!-- Navigasi utama -->
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <!-- Logo situs dalam navigasi -->
+          <a href="https://ikeon.rf.gd" class="logo">
+            <img src="assets/images/logohitam.png" alt="logo">
+          </a>
+          <!-- Tombol untuk menutup menu navigasi -->
+          <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+        
+        <!-- Daftar tautan navigasi -->
+        <ul class="navbar-list">
+          <li>
+            <a href="AboutUs.html" class="navbar-link" data-nav-link>About Us</a>
+          </li>
+          <li>
+            <a href="BlogUs.html" class="navbar-link" data-nav-link>Blog Us</a>
+          </li>
+          <li>
+            <a href="Maps.html" class="navbar-link" data-nav-link>Maps</a>
+          </li>
+          <li>
+            <a href="Destination.html" class="navbar-link" data-nav-link>Destination</a>
+          </li>
+          <li>
+            <a href="#package" class="navbar-link" data-nav-link>packages</a>
+          </li>
+          <li>
+            <a href="#contact" class="navbar-link" data-nav-link>contact us</a>
+          </li>
+        </ul>
+      </nav>
+      
+      <!-- Tombol untuk melakukan pemesanan -->       
+    </div>
+  </div>
+</header>
+
+
+  <!-- BODY PERMAINAN ALL INCLUDE ON MAIN -->
+  <main>
+    <article>
+      <!-- #HERO SECTION -->
+      <section class="hero" id="home">
+        <div class="video-container">
+          <video autoplay muted loop class="hero-video">
+            <source src="assets/video/hero.mp4" type="video/mp4" loop="true">
+            Tidak muncul, browser tidak support.
+          </video>
+        </div>
+        <div class="container">
+          <h2 class="h1 hero-title animate__animated animate__fadeInDown" style="animation-delay: 0.5s;">IKEON</h2>
+          <p class="hero-text animate__animated animate__fadeInUp" style="animation-delay: 1s;">
+            Temukan destinasi impian Anda dan nikmati pengalaman perjalanan yang tak terlupakan bersama IKEON. 
+            Kami menawarkan paket wisata yang lengkap dan menarik untuk berbagai destinasi di seluruh dunia.
+          </p>
+          <div class="btn-group">
+            <a href="#package" class="btn btn-primary animate__animated animate__fadeInLeft" style="animation-delay: 1.5s;">Pelajari lebih lanjut</a>
+            <a href="#checkprice" class="btn btn-secondary animate__animated animate__fadeInRight" style="animation-delay: 2s;">Pesan sekarang</a>            
+          </div>
+        </div>
+      </section>         
+
+      <!-- TOUR SEARCH WITH JS #TOUR -->
+      <section class="tour-search" id="checkprice">
+        <div class="container">
+            <form action="" class="tour-search-form" id="tour-search-form">
+                <div class="input-wrapper" data-aos="fade-up">
+                    <label for="from" class="input-label">From:</label>
+                    <input type="text" id="from" class="input-field" placeholder="Tokyo">
+                </div>
+                <div class="input-wrapper" data-aos="fade-up">
+                    <label for="to" class="input-label">To:</label>
+                    <select id="to" class="input-field">
+                        <option value="singapore">Singapore / Singapore</option>
+                        <option value="malaysia">Malaysia / Kuala Lumpur</option>
+                        <option value="indonesia">Indonesia / Bali</option>
+                    </select>
+                </div>
+                <div class="input-wrapper" data-aos="fade-up">
+                    <label for="passengers" class="input-label">Jumlah Orang*</label>
+                    <input type="text" name="passengers" id="passengers" required readonly class="input-field" value="1 Dewasa, 0 Anak, 0 Bayi" onclick="openModal()">
+                </div>
+                <div class="input-wrapper" data-aos="fade-up">
+                    <label for="checkin" class="input-label">Tanggal Checkin*</label>
+                    <input type="date" name="checkin" id="checkin" required class="input-field">
+                </div>
+                <div class="input-wrapper" data-aos="fade-up">
+                    <label for="checkout" class="input-label">Tanggal Checkout*</label>
+                    <input type="date" name="checkout" id="checkout" required class="input-field">
+                </div>
+                <button type="submit"data-aos="fade-up" class="btn btn-secondary">Pesan Sekarang</button>
+            </form>
+        </div>
+        <div id="result" class="container"></div>
+    </section>
+
+    <div id="passengerModal" class="modal">
+        <div class="modal-content">
+            <h2>Jumlah Penumpang</h2>
+            <div class="passenger-select">
+                <label>Dewasa (12 thn atau lebih)</label>
+                <div>
+                    <button onclick="changePassenger('adult', -1)">-</button>
+                    <span id="adultCount">1</span>
+                    <button onclick="changePassenger('adult', 1)">+</button>
+                </div>
+            </div>
+            <div class="passenger-select">
+                <label>Anak (2 - 11 thn)</label>
+                <div>
+                    <button onclick="changePassenger('child', -1)">-</button>
+                    <span id="childCount">0</span>
+                    <button onclick="changePassenger('child', 1)">+</button>
+                </div>
+            </div>
+            <div class="passenger-select">
+                <label>Bayi (di bawah 2 tahun)</label>
+                <div>
+                    <button onclick="changePassenger('infant', -1)">-</button>
+                    <span id="infantCount">0</span>
+                    <button onclick="changePassenger('infant', 1)">+</button>
+                </div>
+            </div>
+            <button onclick="closeModal()" class="btn" style="background-color: var(--green);">Selesai</button>
+        </div>
+    </div>
+      
+  
+      <!-- #PACKGAE SECTION -->
+      <section class="package" id="package" style="margin-top: 20px; margin-bottom: 20px;">
+        <div class="container">
+          <p class="section-subtitle" data-aos="fade-up">Paket Populer</p>
+          <h2 class="section-title" data-aos="fade-up">Lihat Paket Kami</h2>
+          <p class="section-text" data-aos="fade-up">
+            Nikmati berbagai pilihan paket menarik yang kami tawarkan. Setiap paket dirancang khusus untuk memenuhi kebutuhan Anda.
+            Dari paket liburan hingga paket layanan profesional, kami memiliki sesuatu untuk setiap orang.
+          </p>
+          <ul class="package-list">
+            <li data-aos="fade-up">
+              <div class="package-card">
+                <figure class="card-banner">
+                  <img src="./assets/images/packege-1.jpg" alt="Bali" loading="lazy">
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3 card-title">Indonesia</h3>
+                  <p class="card-text">
+                    Destinasi eksotis yang menyimpan kecantikan alam yang tiada tara.
+                  </p>
+                </div>
+                <div class="card-price">
+                  <div class="wrapper">
+                    <p class="reviews">(99+ ulasan)</p>
+                    <div class="card-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                  </div>
+                  <p class="price">
+                    200K.IDR
+                    <span>/ per orang</span>
+                  </p>
+                  <button class="btn btn-secondary">Pesan Sekarang</button>
+                </div>
+              </div>
+            </li>
+            <li data-aos="fade-up" data-aos-delay="200">
+              <div class="package-card">
+                <figure class="card-banner">
+                  <img src="./assets/images/packege-2.jpg" alt="Malaysia" loading="lazy">
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3 card-title">Malaysia</h3>
+                  <p class="card-text">
+                    Terbenam dalam keindahan alam tropis dan keanekaragaman budaya Malaysia.
+                  </p>
+                </div>
+                <div class="card-price">
+                  <div class="wrapper">
+                    <p class="reviews">(62 ulasan)</p>
+                    <div class="card-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                  </div>
+                  <p class="price">
+                    520K.IDR
+                    <span>/ per orang</span>
+                  </p>
+                  <button class="btn btn-secondary">Pesan Sekarang</button>
+                </div>
+              </div>
+            </li>
+            <li data-aos="fade-up" data-aos-delay="400">
+              <div class="package-card">
+                <figure class="card-banner">
+                  <img src="./assets/images/packege-3.jpg" alt="Singapura" loading="lazy">
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3 card-title">Singapura</h3>
+                  <p class="card-text">
+                    Nikmati kemewahan modern yang dipadu dengan kekayaan tradisi kuno.
+                  </p>
+                </div>
+                <div class="card-price">
+                  <div class="wrapper">
+                    <p class="reviews">(99+ ulasan)</p>
+                    <div class="card-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                  </div>
+                  <p class="price">
+                    800K.IDR
+                    <span>/ per orang</span>
+                  </p>
+                  <button class="btn btn-secondary">Pesan Sekarang</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button class="btn btn-primary" data-aos="fade-up" style="display: block;">Lihat Semua Paket</button>
+        </div>
+      </section>
+      
+      
+    </article>
+  </main>
+
+    <!-- footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="#" class="logo" data-aos="fade-down">
+            <img src="./assets/images/logo.png" alt="logo">
+          </a>
+          <p class="footer-text" data-aos="fade-up">
+            IKEON.rf.gd adalah situs web perjalanan yang dirancang untuk memberikan pengalaman terbaik dalam merencanakan dan menikmati liburan Anda. 
+            Dengan antarmuka yang ramah pengguna dan informasi yang komprehensif, IKEON.rf.gd
+            menjadi solusi satu atap bagi para pelancong yang mencari inspirasi, perencanaan perjalanan, dan pemesanan layanan wisata.
+          </p>
+        </div>
+        <div class="footer-contact" data-aos="fade-up">
+          <h4 class="contact-title" id="contact">Contact Us</h4>
+          <ul>
+            <li class="contact-item">
+              <ion-icon name="call-outline"></ion-icon>
+              <a href="https://wa.me/6285935388291" class="contact-link">+6285935388291</a>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="mail-outline"></ion-icon>
+              <a href="mailto:timeunbydeath@gmail.com" class="contact-link">timeunbydeath@gmail.com</a>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="location-outline"></ion-icon>
+              <a href="https://maps.app.goo.gl/PbrBnoQQcFq2AZTY6" class="contact-link">Bali, Denpasar</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-form" data-aos="fade-up">
+          <p class="form-text">
+            Berlangganan buletin kami untuk mendapatkan informasi terbaru dan berita terbaru !!
+          </p>
+          <form action="" class="form-wrapper" id="subscribeForm">
+            <input type="email" name="email" class="input-field" placeholder="Enter Your Email" required>
+            <button type="submit" class="btn btn-secondary" id="submitButton">Subscribe</button>
+          </form>          
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          <a href="https://ikeon.rf.gd">IKEON</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+    duration: 1500,
+  })
+  </script>
+
+
+  <!-- script js -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- libarary -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
